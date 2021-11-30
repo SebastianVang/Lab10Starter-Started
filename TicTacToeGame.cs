@@ -57,6 +57,15 @@ namespace Lab10Starter
             }
         }
 
+        public void setOScore(int score)
+        {
+            scores[(int)Player.O] = score;
+        }
+
+        public void setXScore(int score)
+        {
+            scores[(int)Player.X] = score;
+        }
         /// <summary>
         /// Resets the game
         /// </summary>

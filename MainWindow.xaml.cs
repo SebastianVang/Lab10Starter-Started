@@ -68,8 +68,16 @@ namespace Lab10Starter
 
             if (gameOver)
             {
-                CelebrateVictory(victor);
-                
+                if ((int)victor == 0)
+                {
+                    ticTacToe.setOScore(ticTacToe.OScore + 1);
+                }
+                else if ((int)victor == 1)
+                {
+                    ticTacToe.setXScore(ticTacToe.XScore + 1);
+                }
+
+                CelebrateVictory(victor); 
             }
         }
 
@@ -82,6 +90,7 @@ namespace Lab10Starter
             XScoreLBL.Content = String.Format("X's Score: {0}", ticTacToe.XScore);
             OScoreLBL.Content = String.Format("O's Score: {0}", ticTacToe.OScore);
 
+            ticTacToe.ResetGame();
             ResetGame();
         }
 
