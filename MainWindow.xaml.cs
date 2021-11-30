@@ -90,7 +90,13 @@ namespace Lab10Starter
         /// </summary>
         private void ResetGame()
         {
-
+            for (int i = 0; i < TicTacToeGame.GRID_SIZE; i++)
+            {
+                for (int j = 0; j < TicTacToeGame.GRID_SIZE; j++)
+                {
+                    grid[i, j].Content = "";
+                }
+            }
         }
 
     }
